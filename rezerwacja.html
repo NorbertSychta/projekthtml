@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Rezerwacja Samochodu</h1>
+		<p class="zegar">Dziś jest: <span id="datetime"></span></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="rezerwacja.html">Rezerwacja</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Formularz Rezerwacji</h2>
+        <form id="reservationForm">
+            <label for="name">Imię i Nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="car">Wybierz Samochód:</label>
+            <select id="car" name="car">
+                <option value="osobowy">Samochód Osobowy</option>
+                <option value="dostawczy">Samochód Dostawczy</option>
+                <option value="luksusowy">Samochód Luksusowy</option>
+                <option value="sportowy">Samochód Sportowy</option>
+            </select>
+            <label for="days">Liczba dni:</label>
+            <input type="number" id="days" name="days" required>
+            <button type="button" onclick="calculatePrice()">Oblicz Cenę</button>
+        </form>
+        <p id="price"></p>
+    </main>
+    <footer>
+        <p>© 2024 Norbert Sychta Wypożyczalnia Samochodów</p>
+    </footer>
+</body>
+</html>

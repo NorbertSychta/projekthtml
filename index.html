@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypożyczalnia Samochodów</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Witamy w Wypożyczalni Samochodów</h1>
+		<p class="zegar">Dziś jest: <span id="datetime"></span></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="rezerwacja.html">Rezerwacja</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Najlepsze samochody do wynajęcia!</h2>
+        <p>Oferujemy szeroki wybór pojazdów dostosowanych do Twoich potrzeb. Niezależnie od tego, czy szukasz kompaktowego samochodu miejskiego, eleganckiego sedana, czy przestronnego vana, znajdziesz u nas idealny pojazd.</p>
+        <p>Dbamy o komfort i satysfakcję naszych klientów. Oferujemy elastyczne warunki wynajmu, atrakcyjne ceny oraz profesjonalną obsługę. Jesteśmy dostępni 24/7, aby odpowiedzieć na wszelkie pytania i pomóc w dokonaniu najlepszego wyboru.</p>
+        <p>Dołącz do grona naszych zadowolonych klientów i ciesz się swobodą podróżowania z naszymi usługami. Zachęcamy do rezerwacji online lub bezpośredniego kontaktu z naszym zespołem.</p>
+        <p>Dziękujemy za zaufanie i życzymy przyjemnej jazdy!</p>
+		<p>Strone odwiedzono <span id="counter"></span> razy.</p>
+    </main>
+    <footer>
+        <p>© 2024 Norbert Sychta Wypożyczalnia Samochodów</p>
+    </footer>
+	    <script>
+        // Pobieranie liczby odwiedzin z pliku PHP i wstawianie do HTML
+        fetch('counter.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('counter').textContent = data;
+            });
+    </script>
+</body>
+</html>
